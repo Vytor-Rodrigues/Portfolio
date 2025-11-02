@@ -1,0 +1,56 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b46c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #805ad5;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom glow effect */
+.glow {
+    text-shadow: 0 0 10px rgba(107, 70, 193, 0.7);
+}
+
+/* Pulse animation for CTA */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(107, 70, 193, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(107, 70, 193, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(107, 70, 193, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
